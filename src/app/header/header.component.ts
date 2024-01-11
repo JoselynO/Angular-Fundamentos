@@ -6,9 +6,13 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, AfterContentInit, AfterViewInit, OnDestroy, OnChanges, DoCheck, AfterContentChecked, AfterViewChecked{
-  
+  pageTitle = "MYAPP";
   constructor(){
     console.log("Constructor ejecutado Header")
+  }
+
+  onDataCheck(e: any){
+    console.log(e);
   }
   ngAfterViewChecked(): void {
     console.log('gAfterViewChecked ejecutado.');
